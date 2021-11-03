@@ -7,12 +7,12 @@ import java.util.Set;
 public class Apriori {
     private ArrayList<Character> I;
     private ArrayList<ArrayList<Character>> giaoTac;
-    private double minSupport;
+    private double minsup;
 
-    public Apriori(ArrayList<Character> I, ArrayList<ArrayList<Character>> giaoTac, double minSupport) {
+    public Apriori(ArrayList<Character> I, ArrayList<ArrayList<Character>> giaoTac, double minsup) {
         this.I = I;
         this.giaoTac = giaoTac;
-        this.minSupport = minSupport;
+        this.minsup = minsup;
     }
 
     public double sup(List<Character> list) {
@@ -62,9 +62,9 @@ public class Apriori {
         System.out.println("Buoc " + ++buoc);
         for (int i = 0; i < I.size(); i++) {
             double sup = sup(Arrays.asList(I.get(i)));
-            if (sup > minSupport) {
+            if (sup > minsup) {
                 System.out.printf("\n\tsup(%s) = %.2f  >  %.2f\n\t==> {%s} la tap muc thuong xuyen\n", I.get(i), sup,
-                        minSupport, I.get(i));
+                        minsup, I.get(i));
                 A.add(I.get(i));
 
                 ArrayList<Character> item = new ArrayList<>();
@@ -75,7 +75,7 @@ public class Apriori {
                 System.out.println("\t==> Xi = " + Xi);
             } else {
                 System.out.printf("\n\tsup(%s) = %.2f  <  %.2f\n\t==> {%s} khong la tap muc thuong xuyen\n", I.get(i),
-                        sup, minSupport, I.get(i));
+                        sup, minsup, I.get(i));
             }
         }
         X.add(Xi);
@@ -87,28 +87,28 @@ public class Apriori {
             System.out.println("Buoc " + ++buoc);
             for (int i = 0; i < temp.size(); i++) {
                 double sup = sup(temp.get(i));
-                if (sup > minSupport) {
+                if (sup > minsup) {
                     System.out.printf("\n\tsup(%s) = %.2f  >  %.2f\n\t==> {%s} la tap muc thuong xuyen\n", temp.get(i),
-                            sup, minSupport, temp.get(i));
+                            sup, minsup, temp.get(i));
 
                     Xi.add(temp.get(i));
                     System.out.println("\t==> Xi = " + Xi);
                 } else {
                     System.out.printf("\n\tsup(%s) = %.2f  <  %.2f\n\t==> {%s} khong la tap muc thuong xuyen\n",
-                            temp.get(i), sup, minSupport, temp.get(i));
+                            temp.get(i), sup, minsup, temp.get(i));
                     countFalse++;
                 }
             }
-            if(Xi.size() != 0) {
+            if (Xi.size() != 0) {
                 X.add(Xi);
-    
+
                 temp = gop(Xi, A);
                 countFalse = 0;
             }
         }
-        System.out.printf("\nTap muc thuong xuyen vs minsup = %.2f la:\n" , minSupport);
+        System.out.printf("\nTap muc thuong xuyen vs minsup = %.2f la:\n", minsup);
         for (int i = 0; i < X.size(); i++) {
-            System.out.println("==> Tap muc co luc luong la " + (i+1) + " : " + X.get(i));
+            System.out.println("==> Tap muc co luc luong la " + (i + 1) + " : " + X.get(i));
         }
     }
 
@@ -128,9 +128,9 @@ public class Apriori {
         giaoTac.add(new ArrayList<Character>(Arrays.asList('n', 'p', 'q', 'z')));
         giaoTac.add(new ArrayList<Character>(Arrays.asList('p', 'q', 'y', 'z')));
 
-        double minSupport = 2.0 / 3;
+        double minsup = 2.0 / 3;
 
-        Apriori apriori = new Apriori(i, giaoTac, minSupport);
+        Apriori apriori = new Apriori(i, giaoTac, minsup);
         apriori.run();
 
     }
