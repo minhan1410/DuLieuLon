@@ -55,7 +55,12 @@ public class Reat {
                         sb.append(Md0.charAt(j));
                     }
                 }
-                Md0 = sb.toString();
+                if (sb.length() > 0) {
+                    Md0 = sb.toString();
+                    sb = new StringBuilder();
+                } else {
+                    break;
+                }
             }
         } else {
             sb.append(Md.get(0));
