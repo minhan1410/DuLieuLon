@@ -1,6 +1,6 @@
 # Apriori
-![Screenshot](img\apriori1.jpg)
-![Screenshot](img\apriori2.jpg)
+![alt](https://github.com/minhan1410/DuLieuLon/blob/master/img/apriori1.jpg)
+![alt](https://github.com/minhan1410/DuLieuLon/blob/master/img/apriori2.jpg)
 
 # Reat
-![Screenshot](img\reat.jpg)
+![alt](https://github.com/minhan1410/DuLieuLon/blob/master/img/reat.jpg)
