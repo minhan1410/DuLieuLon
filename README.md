@@ -1,7 +1,10 @@
 # BT nhỏ cá nhân
-## [Thuật toán tìm tập mục thường xuyên](https://github.com/minhan1410/DuLieuLon/blob/master/Apriori.java)
+## [Thuật toán tìm tập mục thường xuyên](Apriori.java)
 ![alt](img/apriori1.jpg)
 ![alt](img/apriori2.jpg)
 
-## [Tìm tập rủt gọn](https://github.com/minhan1410/DuLieuLon/blob/master/Reat.java)
+## [Tìm tập rủt gọn](Reat.java)
 ![alt](img/reat.jpg)
+
+# [Tìm tập rút gọn trong bảng quyết định nhất quán](Bai3.java)
+![alt]()
