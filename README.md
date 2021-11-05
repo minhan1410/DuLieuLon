@@ -3,7 +3,7 @@
 ![alt](img/apriori1.jpg)
 ![alt](img/apriori2.jpg)
 
-## [Tìm tập rủt gọn](Reat.java)
+## [Tìm tập rút gọn](Reat.java)
 ![alt](img/reat.jpg)
 
 # [Tìm tập rút gọn trong bảng quyết định nhất quán](Bai3.java)
