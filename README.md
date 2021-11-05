@@ -1,5 +1,5 @@
 # BT nhỏ cá nhân
-## [Thuật toán tìm tập mục thường xuyên](Apriori.java)
+## [Tìm tập mục thường xuyên](Apriori.java)
 ![alt](img/apriori1.jpg)
 ![alt](img/apriori2.jpg)
 
