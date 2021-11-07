@@ -6,5 +6,5 @@
 ## [Tìm tập rút gọn](Reat.java)
 ![alt](img/reat.jpg)
 
-# [Tìm tập rút gọn trong bảng quyết định nhất quán](Bai3.java)
-![alt]()
+## [Tìm tập rút gọn trong bảng quyết định nhất quán](Bai3.java)
+![alt](img/bai3.jpg)

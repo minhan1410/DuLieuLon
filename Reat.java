@@ -45,7 +45,6 @@ public class Reat {
         }
         Md.removeAll(removeMd);
         System.out.println("==> Md = " + Md);
-
         StringBuilder sb = new StringBuilder();
         if (Md.size() > 1) {
             String Md0 = Md.get(0);
@@ -59,8 +58,12 @@ public class Reat {
                     Md0 = sb.toString();
                     sb = new StringBuilder();
                 } else {
+                    Md0 = "";
                     break;
                 }
+            }
+            if (Md0.length() > 0) {
+                sb.append(Md0);
             }
         } else {
             sb.append(Md.get(0));
@@ -85,13 +88,8 @@ public class Reat {
         c.append("r");
         c.append("s");
 
-        int[][] dl = new int[][] { 
-            { 0, 1, 1, 1, 0 }, 
-            { 1, 1, 0, 1, 0 }, 
-            { 0, 0, 1, 0, 1 }, 
-            { 1, 0, 0, 1, 1 },
-            { 0, 1, 0, 1, 0 } 
-        };
+        int[][] dl = new int[][] { { 0, 1, 1, 1, 0 }, { 1, 1, 0, 1, 0 }, { 0, 0, 1, 0, 1 }, { 1, 0, 0, 1, 1 },
+                { 0, 1, 0, 1, 0 } };
 
         Reat reat = new Reat(c, dl);
         reat.run();
@@ -106,12 +104,8 @@ public class Reat {
         c2.append("f");
         c2.append("g");
 
-        int[][] dl2 = new int[][] { 
-            { 1, 1, 0, 0, 1, 1, 0 }, 
-            { 1, 1, 1, 1, 0, 0, 1 }, 
-            { 0, 0, 0, 1, 1, 0, 1 },
-            { 0, 1, 1, 0, 1, 1, 1 }
-        };
+        int[][] dl2 = new int[][] { { 1, 1, 0, 0, 1, 1, 0 }, { 1, 1, 1, 1, 0, 0, 1 }, { 0, 0, 0, 1, 1, 0, 1 },
+                { 0, 1, 1, 0, 1, 1, 1 } };
 
         Reat reat2 = new Reat(c2, dl2);
         reat2.run();
