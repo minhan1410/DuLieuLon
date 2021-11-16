@@ -29,7 +29,6 @@ public class Reat {
             System.out.println();
         }
         System.out.println("==> Er = " + Er);
-
         ArrayList<String> Md = Er.stream().filter(i -> i.length() > 0 && i.indexOf("d") == -1)
                 .collect(Collectors.toCollection(ArrayList::new));
 
@@ -78,7 +77,6 @@ public class Reat {
         } else {
             sb.append(Md.get(0));
         }
-
         StringBuilder v = new StringBuilder();
         for (int i = 0; i < r.length(); i++) {
             if (sb.indexOf(r.charAt(i) + "") == -1) {
@@ -86,7 +84,6 @@ public class Reat {
             }
         }
         System.out.println("==> V = R - {" + sb + "} = " + v);
-
         System.out.println(
                 "Vay " + v.toString().replace(", d, ", "") + " la tap cac thuoc tinh rut gon cua bang quyet dinh tren");
     }
@@ -98,8 +95,13 @@ public class Reat {
         c.append("r");
         c.append("s");
 
-        int[][] dl = new int[][] { { 0, 1, 1, 1, 0 }, { 1, 1, 0, 1, 0 }, { 0, 0, 1, 0, 1 }, { 1, 0, 0, 1, 1 },
-                { 0, 1, 0, 1, 0 } };
+        int[][] dl = new int[][] { 
+            { 0, 1, 1, 1, 0 }, 
+            { 1, 1, 0, 1, 0 }, 
+            { 0, 0, 1, 0, 1 }, 
+            { 1, 0, 0, 1, 1 },
+            { 0, 1, 0, 1, 0 } 
+        };
 
         Reat reat = new Reat(c, dl);
         reat.run();
@@ -114,8 +116,12 @@ public class Reat {
         c2.append("f");
         c2.append("g");
 
-        int[][] dl2 = new int[][] { { 1, 1, 0, 0, 1, 1, 0 }, { 1, 1, 1, 1, 0, 0, 1 }, { 0, 0, 0, 1, 1, 0, 1 },
-                { 0, 1, 1, 0, 0, 1, 0 } };
+        int[][] dl2 = new int[][] { 
+            { 1, 1, 0, 0, 1, 1, 0 }, 
+            { 1, 1, 1, 1, 0, 0, 1 }, 
+            { 0, 0, 0, 1, 1, 0, 1 },
+            { 0, 1, 1, 0, 0, 1, 0 }
+        };
 
         Reat reat2 = new Reat(c2, dl2);
         reat2.run();
@@ -130,10 +136,14 @@ public class Reat {
         c3.append("f");
         c3.append("g");
 
-        int[][] dl3 = new int[][] { { 1, 1, 0, 0, 1, 1, 0 }, { 1, 1, 1, 1, 0, 0, 1 }, { 0, 0, 0, 1, 1, 0, 1 },
-                { 0, 1, 1, 0, 1, 1, 1 } };
+        int[][] dl3 = new int[][] { 
+            { 1, 1, 0, 0, 1, 1, 0 }, 
+            { 1, 1, 1, 1, 0, 0, 1 }, 
+            { 0, 0, 0, 1, 1, 0, 1 },
+            { 0, 1, 1, 0, 1, 1, 1 } 
+        };
 
-        Reat reat3 = new Reat(c2, dl3);
+        Reat reat3 = new Reat(c3, dl3);
         reat3.run();
     }
 }
