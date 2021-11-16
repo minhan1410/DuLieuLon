@@ -62,7 +62,7 @@ public class Apriori {
         System.out.println("Buoc " + ++buoc);
         for (int i = 0; i < I.size(); i++) {
             double sup = sup(Arrays.asList(I.get(i)));
-            if (sup > minsup) {
+            if (sup >= minsup) {
                 System.out.printf("\n\tsup(%s) = %.2f  >  %.2f\n\t==> {%s} la tap muc thuong xuyen\n", I.get(i), sup,
                         minsup, I.get(i));
                 A.add(I.get(i));
@@ -87,7 +87,7 @@ public class Apriori {
             System.out.println("Buoc " + ++buoc);
             for (int i = 0; i < temp.size(); i++) {
                 double sup = sup(temp.get(i));
-                if (sup > minsup) {
+                if (sup >= minsup) {
                     System.out.printf("\n\tsup(%s) = %.2f  >  %.2f\n\t==> {%s} la tap muc thuong xuyen\n", temp.get(i),
                             sup, minsup, temp.get(i));
 
