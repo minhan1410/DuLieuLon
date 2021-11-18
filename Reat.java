@@ -34,11 +34,11 @@ public class Reat {
 
         ArrayList<String> removeMd = new ArrayList<String>();
         for (String i : Md) {
-            int lengS = i.length(), count = 0;
             for (String j : Md) {
+                int count = 0;
                 if (!i.equals(j)) {
                     for (int k = 0; k < j.length(); k++) {
-                        if (lengS < j.length() || i.indexOf(j.charAt(k)) == -1) {
+                        if ( i.indexOf(j.charAt(k)) == -1) {
                             break;
                         } else {
                             count++;
@@ -85,7 +85,7 @@ public class Reat {
         }
         System.out.println("==> V = R - {" + sb + "} = " + v);
         System.out.println(
-                "Vay " + v.toString().replace(", d, ", "") + " la tap cac thuoc tinh rut gon cua bang quyet dinh tren");
+                "Vay " + v.toString().replace(", d, ", "").replace("d, ", "") + " la tap cac thuoc tinh rut gon cua bang quyet dinh tren");
     }
 
     public static void main(String[] args) {
@@ -140,10 +140,29 @@ public class Reat {
             { 1, 1, 0, 0, 1, 1, 0 }, 
             { 1, 1, 1, 1, 0, 0, 1 }, 
             { 0, 0, 0, 1, 1, 0, 1 },
-            { 0, 1, 1, 0, 1, 1, 1 } 
-        };
+            { 0, 1, 1, 0, 1, 1, 1 } };
 
         Reat reat3 = new Reat(c3, dl3);
         reat3.run();
+
+        System.out.println();
+
+        StringBuffer c4 = new StringBuffer();
+        c4.append("a");
+        c4.append("b");
+        c4.append("c");
+        c4.append("e");
+        c4.append("f");
+        c4.append("g");
+
+        int[][] dl4 = new int[][] { 
+            { 1, 1, 0, 0, 1, 1, 0 }, 
+            { 1, 1, 1, 1, 0, 0, 1 }, 
+            { 0, 0, 0, 1, 1, 0, 1 },
+            { 1, 1, 0, 0, 1, 1, 1 } 
+        };
+
+        Reat reat4 = new Reat(c4, dl4);
+        reat4.run();
     }
 }

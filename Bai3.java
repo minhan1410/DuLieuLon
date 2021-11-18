@@ -113,23 +113,23 @@ public class Bai3 {
     }
 
     public static void main(String[] args) {
-        StringBuffer c = new StringBuffer();
-        c.append("a");
-        c.append("b");
-        c.append("c");
+        // StringBuffer c = new StringBuffer();
+        // c.append("a");
+        // c.append("b");
+        // c.append("c");
 
-        int[][] dl = new int[][] { 
-            { 1, 0, 1, 1 }, 
-            { 0, 1, 1, 0 }, 
-            { 1, 1, 1, 0 }, 
-            { 1, 0, 0, 0 }, 
-            { 1, 1, 0, 1 } 
-        };
+        // int[][] dl = new int[][] { 
+        //     { 1, 0, 1, 1 }, 
+        //     { 0, 1, 1, 0 }, 
+        //     { 1, 1, 1, 0 }, 
+        //     { 1, 0, 0, 0 }, 
+        //     { 1, 1, 0, 1 } 
+        // };
 
-        Bai3 bai3 = new Bai3(c, dl);
-        bai3.run();
+        // Bai3 bai3 = new Bai3(c, dl);
+        // bai3.run();
 
-        System.out.println();
+        // System.out.println();
 
         StringBuffer c2 = new StringBuffer();
         c2.append("a");
@@ -142,7 +142,7 @@ public class Bai3 {
             { 1, 1, 0, 0, 1, 0 }, 
             { 1, 0, 0, 0, 0, 1 }, 
             { 0, 1, 1, 0, 1, 1 },
-            { 1, 1, 1, 0, 0, 1 } 
+            { 1, 1, 0, 0, 1, 1 } 
         };
 
         Bai3 bai32 = new Bai3(c2, dl2);

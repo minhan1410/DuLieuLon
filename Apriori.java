@@ -128,7 +128,7 @@ public class Apriori {
         giaoTac.add(new ArrayList<Character>(Arrays.asList('n', 'p', 'q', 'z')));
         giaoTac.add(new ArrayList<Character>(Arrays.asList('p', 'q', 'y', 'z')));
 
-        double minsup = 2.0 / 3;
+        double minsup = 0 / 3;
 
         Apriori apriori = new Apriori(i, giaoTac, minsup);
         apriori.run();
